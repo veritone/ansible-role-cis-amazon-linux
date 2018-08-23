@@ -4,7 +4,7 @@
 # 6.1.14 Audit SGID executables
 
 - name: 6.1.14 - Check if any SGID executables exist
-  shell: df --local -P | awk {'if (NR!=1) print $6'} | xargs -I '{}' find '{}' -xdev -type f -perm -2000
+  shell: df --local -P | awk {'if (NR!=1) print $6'} | xargs -I '{}' find '{}' -xdev -type f -perm -2000 | grep -v containers || true
   register: audit_6_1_14
   tags:
     - level-1

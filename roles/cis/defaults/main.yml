@@ -130,5 +130,6 @@ cis_wheel_group_members: "root"
 ###############################################
 # Veritone control variables
 ###############################################
+vt_control_firewall_3_6_2: False
 vt_control_ssh_5_2_7: False
 vt_control_ssh_5_2_9: False
