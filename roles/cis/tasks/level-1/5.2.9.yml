@@ -15,7 +15,7 @@
     regexp: "^PermitEmptyPasswords\\s+"
     line: "PermitEmptyPasswords no"
     dest: "/etc/ssh/sshd_config"
-  when: sshd_config.stat.exists
+  when: vt_control_ssh_5_2_9 | bool and sshd_config.stat.exists
   notify:
     - Restart sshd
   tags:

@@ -90,7 +90,7 @@ cis_sshd_client_alive_count_max: 0
 cis_sshd_login_grace_time: 60
 
 # 5.2.15
-cis_sshd_allow_users: "" # A comma-delimited list of users to allow ssh access to
+cis_sshd_allow_users: "ec2-user" # A comma-delimited list of users to allow ssh access to
 cis_sshd_allow_groups: "" # A comma-delimited list of groups ot allow ssh access to
 cis_sshd_deny_users: "" # A comma-delimited list of users to deny ssh access for
 cis_sshd_deny_groups: "" # A comma-delimited list of groups to deny ssh access for
@@ -126,3 +126,9 @@ cis_umask_shell_files:
 
 # 5.5
 cis_wheel_group_members: "root"
+#
+###############################################
+# Veritone control variables
+###############################################
+vt_control_ssh_5_2_7: False
+vt_control_ssh_5_2_9: False
