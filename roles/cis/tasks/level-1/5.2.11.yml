@@ -15,7 +15,7 @@
     regexp: "^Ciphers\\s+"
     line: "Ciphers {{ cis_sshd_ciphers }}"
     dest: "/etc/ssh/sshd_config"
-  when: sshd_config.stat.exists
+  when: vt_control_ssh_5_2_11 | bool and sshd_config.stat.exists
   notify:
     - Restart sshd
   tags:

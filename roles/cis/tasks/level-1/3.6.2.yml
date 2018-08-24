@@ -12,7 +12,7 @@
     - INPUT
     - FORWARD
     - OUTPUT
-  when: vt_control_firewall_3_6_2 | bool
+  when: vt_control_activate_iptables | bool and vt_control_firewall_3_6_2 | bool
   tags:
     - level-1
     - section-3

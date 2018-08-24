@@ -11,6 +11,7 @@
     ctstate: ESTABLISHED,NEW
     jump: ACCEPT
   become: yes
+  when: vt_control_activate_iptables | bool
   tags:
     - level-1
     - section-3
@@ -25,6 +26,7 @@
     ctstate: ESTABLISHED,NEW
     jump: ACCEPT
   become: yes
+  when: vt_control_activate_iptables | bool
   tags:
     - level-1
     - section-3
@@ -39,6 +41,7 @@
     ctstate: ESTABLISHED,NEW
     jump: ACCEPT
   become: yes
+  when: vt_control_activate_iptables | bool
   tags:
     - level-1
     - section-3
@@ -53,6 +56,7 @@
     ctstate: ESTABLISHED
     jump: ACCEPT
   become: yes
+  when: vt_control_activate_iptables | bool
   tags:
     - level-1
     - section-3
@@ -67,6 +71,7 @@
     ctstate: ESTABLISHED
     jump: ACCEPT
   become: yes
+  when: vt_control_activate_iptables | bool
   tags:
     - level-1
     - section-3
@@ -81,6 +86,7 @@
     ctstate: ESTABLISHED
     jump: ACCEPT
   become: yes
+  when: vt_control_activate_iptables | bool
   tags:
     - level-1
     - section-3

@@ -6,6 +6,7 @@
 - name: 3.6.5 - Ensure firewall rules exist for all open ports
   debug:
     msg: "WARNING - We are already checking this as part of security groups."
+  when: vt_control_activate_iptables | bool
   tags:
     - level-1
     - section-3
