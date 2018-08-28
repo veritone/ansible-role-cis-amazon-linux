@@ -1,5 +1,5 @@
 localhost ansible_connection=local
 
 [test-monthly]
-test_box ansible_host=52.222.76.190 ansible_user=ec2-user ansible_private_key=~/aws-creds/rick-wsl-testing.pem
+test_box ansible_host=52.61.187.253 ansible_user=ec2-user ansible_private_key=~/aws-creds/rick-wsl-testing.pem
 
