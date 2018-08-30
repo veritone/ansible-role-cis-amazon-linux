@@ -17,7 +17,7 @@
   copy:
     path: "/etc/hosts.deny"
     content: "ALL: ALL\n"
-  when: hosts_deny_3_4_3.stat.exists is not defined or not hosts_deny_3_4_3.stat.exists
+  when: vt_control_hosts_deny_3_4_3 | bool and (hosts_deny_3_4_3.stat.exists is not defined or not hosts_deny_3_4_3.stat.exists)
   tags:
     - level-1
     - section-3
@@ -29,7 +29,7 @@
     dest: "/etc/hosts.deny"
     regexp: "^ALL:"
     line: "ALL: ALL"
-  when: hosts_deny_3_4_3.stat.exists is defined and hosts_deny_3_4_3.stat.exists
+  when: vt_control_hosts_deny_3_4_3 | bool and hosts_deny_3_4_3.stat.exists is defined and hosts_deny_3_4_3.stat.exists
   tags:
     - level-1
     - section-3
